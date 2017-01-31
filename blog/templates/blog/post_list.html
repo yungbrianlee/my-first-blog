@@ -7,16 +7,24 @@
             <h1><a href="">Django Girls Blog</a></h1>
         </div>
 
-        <div>
+		{% for post in posts %}
+    		<div>
+        		<p>published: {{ post.published_date }}</p>
+        		<h1><a href="">{{ post.title }}</a></h1>
+        		<p>{{ post.text|linebreaksbr }}</p>
+    	</div>
+	{% endfor %}
+	
+        {{ post }} 
             <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">Murakami Quote #1</a></h2>
-            <p>“I think you still love me, but we can’t escape the fact that I’m not enough for you. I knew this was going to happen. So I’m not blaming you for falling in love with another woman. I’m not angry, either. I should be, but I’m not. I just feel pain. A lot of pain. I thought I could imagine how much this would hurt, but I was wrong.” </p>
-        </div>
+            <h2><a href="">My first post</a></h2>
+            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        {{ post }}
 
-        <div>
+        {{ post }}
             <p>published: 14.06.2014, 12:14</p>
-            <h2><a href="">Murakami Quote #2</a></h2>
+            <h2><a href="">My second post</a></h2>
             <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut f.</p>
-        </div>
+        {{ post }}
     </body>
 </html>
